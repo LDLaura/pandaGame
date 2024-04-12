@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda</title>
+
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/tablet.css">
+    <link rel="stylesheet" href="style/phone.css">
+
+</head>
+<body onload="keyboard()">
+    <h1>Le jeu du Panda</h1>
+    <div class="background">
+
+    </div>
+
+    <!-- Images, Virtual keyboard, Secret word, Button new word -->
+    <div class="container">
+        <div class="left">
+            <img id="panda" src="media/images/p0.png" alt="Un panda qui fait du skate en levant la patte">
+        </div>
+        <div class="right">
+            <div id="game-secretWord"></div>
+            <div id="game-Keyboard"></div>
+            <div class="newWordButton" onclick="newWord()">
+                    <button>Nouveau mot</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop up : lost -->
+    <div class="modal" id="modalLost">
+        <div class="modal-back"></div>
+        <div class="modal-container">
+            <span>Tu as perdu dommage ! </span>
+            <script type="text/javascript">
+            var secretWord
+            </script>
+          <a href="#" id="modal-close" onclick="newWord()">[Rejouer]</a>
+        </div>
+    </div>
+
+    <!-- Pop up : win -->
+    <div class="modal" id="modalWin">
+        <div class="modal-back"></div>
+        <div class="modal-container">
+            <span>Tu as gagner, bravo !</span>
+            <a href="#" id="modal-close" onclick="newWord()">[Rejouer]</a>
+        </div>
+    </div>
+    
+
+
+
+
+    <script src="javascript/dico.js"></script>
+    <script src="javascript/generateAlphabet.js"></script>
+    <script src="javascript/game.js"></script>
+    <script src="javascript/main.js"></script>
+</body>
+</html>

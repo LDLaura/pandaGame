@@ -1,0 +1,81 @@
+body{
+    background-image: url(../media/images/fond.jpg);
+    background-size: 100%;
+}
+
+h1{
+    text-align: center;
+    font-family: fantasy;
+}
+
+.container{
+    display: flex;
+}
+
+.right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+}
+
+.left{
+    width: 50%;
+}
+
+#panda{
+    width: 70%;
+    height: auto;
+}
+
+#game-Keyboard{
+    padding: 10px;
+    padding-right: 200px;
+}
+
+.alpha{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+#game-secretWord{
+    letter-spacing: 10px;
+    font-size: x-large;
+    margin-bottom: 20px;  
+    padding-right: 200px;
+}
+
+.newWordButton{
+    padding-right: 200px;
+}
+
+.modal {
+    display: none;
+  }
+  .modal-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba( 0, 0, 0, .25 )
+  }
+  .modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 25px;
+    background: white;
+    transform: translate(-50%, -50%)
+  }
+
+  .block{
+    display: block;
+  }
+
+  #modal-close{
+    color : red;
+    text-transform: uppercase;
+  }

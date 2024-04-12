@@ -1,0 +1,20 @@
+/* Phone */
+@media screen and (max-width: 500px) {
+    body{
+        background-image: url(../media/images/fond_phone.jpg);
+        background-size: 100%;
+        background-size: auto, auto;
+        background-repeat: no-repeat;
+    }
+
+    #panda{
+        width: 100%;
+        height: auto;
+        padding-top: 100px;
+    }
+
+    #game-Keyboard{
+        padding: 10px;
+        padding-right: 10px;
+    }
+}

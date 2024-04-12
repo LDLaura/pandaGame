@@ -1,0 +1,33 @@
+/* Tablet */
+@media screen and (min-width: 500px) and (max-width: 900px){
+    body{
+        background-image: url(../media/images/fond_tablet.jpg);
+        width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: auto, auto;
+    }
+
+    #panda{
+        width: 75%;
+        height: auto;
+    }
+
+    #game-Keyboard{
+        padding: 10px;
+        padding-right: 10px;
+    }
+
+    .alpha{
+        margin-right: 5px;
+        margin-bottom: 5px;
+        font-size: small;
+    } 
+    .newWordButton{
+       font-size: small;
+    }        
+
+    #game-secretWord{
+        font-size: large;
+    }
+}
