@@ -17,4 +17,14 @@
         padding: 10px;
         padding-right: 10px;
     }
+
+    #popInLost{
+        width: 30vh;
+        height : 15vh;
+    }
+
+    #popInWin{
+        width: 30vh;
+        height : 15vh;
+    }
 }

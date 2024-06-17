@@ -1,10 +1,10 @@
-//Gloabal variable creation
+//Global variable creation
 var secretWord;
 var dom_game;
 var visibleWord = []; 
 var tries = 0;
 var maxTriesNumber = 8;
-var letterFound = true
+var letterFound = true;
 
 
 /**
@@ -28,13 +28,13 @@ function init(){
     dom_game = document.getElementById('game-secretWord');
     let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"] 
     for (let i = 0; i < secretWord.length; i++) {
-        if(i == 0 || i == secretWord.length - 1){
+        if(i === 0 || i === secretWord.length - 1){
             visibleWord.push(secretWord.charAt(i));
         }
         else {
             let found = false
             for (let j = 0; j < letters.length; j++){
-                if (letters[j] == secretWord[i]){
+                if (letters[j] === secretWord[i]){
                 visibleWord.push("_")
                 found = true
                 break
@@ -43,7 +43,7 @@ function init(){
                     found = false                   
                 }
             } 
-            if (found == false){
+            if (found === false){
                 visibleWord.push(secretWord.charAt(i))
             } 
         } 
@@ -76,7 +76,7 @@ function compareLetter(lettre){
 
 
 function letter(){
-    if (letterFound == true){
+    if (letterFound === true){
         win();
     }
     else {tries++;
@@ -99,11 +99,26 @@ function imgPanda(){
  * function win() opens a pop up with a message indicating that you have won + a replay button
  * @returns void
  */
+// function win(){
+//     let popInWin = document.getElementById('popInWin');
+//     let modalWin = document.getElementById('modalWin');
+//     if (secretWord === visibleWord.join("")){
+//         modalWin.classList.add("block");
+//     }
+// }
+
 function win(){
-    let modalWin = document.getElementById('modalWin');
-    if (secretWord === visibleWord.join("")){
-        modalWin.classList.add("block");
-    }
+    let popInWin = document.getElementById('popInWin');
+    if (secretWord === visibleWord.join("")) {
+        popInWin.style.visibility = 'visible';
+        popInWin.textContent = 'Tu as gagné, bravo !';
+        var buttonReplay = document.getElementById('buttonReplay');
+        buttonReplay = document.createElement('button');  
+        buttonReplay.setAttribute('onclick', 'newWord()');
+        buttonReplay.innerText = "Rejouer";
+        popInWin.appendChild(buttonReplay);
+        console.log(buttonReplay);
+    } 
 }
 
 
@@ -112,11 +127,18 @@ function win(){
  * @returns void
  */
 function lost(){
-    let modalLost = document.getElementById('modalLost')
+    let popInLost = document.getElementById('popInLost');
     if (tries >= maxTriesNumber) {
-        modalLost.classList.add("block");
+        popInLost.style.visibility = 'visible';
+        popInLost.textContent = 'Tu as perdu dommage !';
+        var buttonReplay = document.getElementById('buttonReplay');
+        buttonReplay = document.createElement('button');  
+        buttonReplay.setAttribute('onclick', 'newWord()');
+        buttonReplay.innerText = "Rejouer";
+        popInLost.appendChild(buttonReplay);
     }
-}
+   
+}   
 
 
 /**

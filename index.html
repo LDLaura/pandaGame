@@ -13,6 +13,7 @@
 </head>
 <body onload="keyboard()">
     <h1>Le jeu du Panda</h1>
+    <!-- Creation of a div to host the backgound in css -->
     <div class="background">
 
     </div>
@@ -23,6 +24,7 @@
             <img id="panda" src="media/images/p0.png" alt="Un panda qui fait du skate en levant la patte">
         </div>
         <div class="right">
+            <!-- Creation of div to activate js function -->
             <div id="game-secretWord"></div>
             <div id="game-Keyboard"></div>
             <div class="newWordButton" onclick="newWord()">
@@ -33,27 +35,19 @@
     </div>
 
     <!-- Pop up : lost -->
-    <div class="modal" id="modalLost">
-        <div class="modal-back"></div>
-        <div class="modal-container">
-            <span>Tu as perdu dommage ! </span>
-            <script type="text/javascript">
-            var secretWord
-            </script>
-          <a href="#" id="modal-close" onclick="newWord()">[Rejouer]</a>
-        </div>
+    <div class="popIn">
+        <div id="popInLost">
+            <div id="buttonReplay"></div>
+        </div> 
     </div>
 
     <!-- Pop up : win -->
-    <div class="modal" id="modalWin">
-        <div class="modal-back"></div>
-        <div class="modal-container">
-            <span>Tu as gagner, bravo !</span>
-            <a href="#" id="modal-close" onclick="newWord()">[Rejouer]</a>
-        </div>
+    <div class="popIn">
+        <div id="popInWin">
+            <div id="buttonReplay"></div>
+        </div> 
     </div>
     
-
 
 
 

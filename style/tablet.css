@@ -30,4 +30,14 @@
     #game-secretWord{
         font-size: large;
     }
+
+    #popInLost{
+        width: 30vh;
+        height : 15vh;
+    }
+
+    #popInWin{
+        width: 30vh;
+        height : 15vh;
+    }
 }

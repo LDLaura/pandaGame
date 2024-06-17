@@ -18,6 +18,7 @@ function keyboard(){
 
 /**
  * function keyboardLetter() deactivates the keyboard letter just clicked
+ * @param event
  * @returns void
  */
 function keyboardLetter(event){
